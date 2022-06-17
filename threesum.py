@@ -30,6 +30,3 @@ class Solution:
 
 lst1 = [-1,0,1,2,-1,-4]
 lst2 = [0,0,0]
-
-print(Solution().threeSum(lst1))
-print(Solution().threeSum(lst2))
