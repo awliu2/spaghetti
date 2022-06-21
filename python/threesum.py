@@ -1,8 +1,8 @@
 from operator import index
-
+from typing import List
 
 class Solution:
-    def threeSum(self, nums: list[int]) -> list[list[int]]:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
         ans=[]
         if len(nums) < 3:
