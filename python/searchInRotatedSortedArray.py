@@ -5,8 +5,9 @@ There is an integer array nums sorted in ascending order
 Given the array nums after the possible rotation and an integer target,
 return the index of target if it is in nums,
 or -1 if it is not in nums.
+"""
 
-
+from typing import List
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
@@ -30,15 +31,16 @@ class Solution:
                 return i
         return -1
 
-class Solution:
-    def search(self, nums: List[int], targt: int) -> int:
+    
+    """
+    def search2(self, nums: List[int], targt: int) -> int:
         low = 0
         high = len(nums) - 1
 
         while low <= high:
             mid = (high + low) // 2
 
-            if target = nums[mid]:
+            if target == nums[mid]:
                 return mid
 
             elif target > nums[mid]:
@@ -46,4 +48,4 @@ class Solution:
 
             else:
                 high = mid
-"""
+    """
