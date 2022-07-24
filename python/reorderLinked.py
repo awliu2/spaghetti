@@ -13,11 +13,33 @@ class Solution:
         # get middle of linked list
         i = head
         j = head
-        while j:
+        while j.next and j.next.next:
             i = i.next
             j = j.next.next
         
+        
         # reverse second half
+        prev, curr = None, i.next
+        while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        i.next = None
+        
+        # merge
+        head1 = head
+        head2 = prev
+        while head2:
+            nextt = head1.next
+            head1.next = head2
+            head1 = head2
+            head2 = nextt
+
+
+
+
+
 
 
 """
