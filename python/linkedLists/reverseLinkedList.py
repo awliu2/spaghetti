@@ -17,3 +17,4 @@ class Solution:
         return prev
             
         
+        freqs = dict()

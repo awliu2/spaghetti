@@ -23,7 +23,6 @@ class Solution:
         return rv
 
     def Bucket(self, nums: List[int], k: int) -> List[int]:
-        print(f"k:{k}")
         counts = defaultdict(int)
         for i in nums:
             if i not in counts:
@@ -36,7 +35,6 @@ class Solution:
         for key,val in counts.items():
             freqsBucket[val].append(key)
 
-        print(freqsBucket)
         bucketIdx = l
         rv = []
         while k > 0:
