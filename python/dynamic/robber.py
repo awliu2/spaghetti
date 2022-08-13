@@ -1,4 +1,5 @@
 from typing import List
+
 class Solution:
     def rob(self, nums: List[int]) -> int:
         # rob(i) = max(nums[i-2] + nums[i], nums[i-1])

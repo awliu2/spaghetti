@@ -32,20 +32,37 @@ class Solution:
         return -1
 
     
-    """
-    def search2(self, nums: List[int], targt: int) -> int:
-        low = 0
-        high = len(nums) - 1
+    
+    def search2(self, nums: List[int], target: int) -> int:
+        max_i = len(nums) - 1
+        l = 0
+        r = max_i
+        while nums[l] > nums[r]:
+            mid = l + r // 2
+            if nums[mid] > nums[l]:
+                l = mid
+            if nums[mid] < nums[l]:
+                r = mid
+        pivot = r
 
-        while low <= high:
-            mid = (high + low) // 2
+        if nums[pivot] == target:
+            return pivot
 
-            if target == nums[mid]:
+        if nums[0] > target:
+            l2 = pivot
+            r2 = max_i
+        else:
+            l2 = 0
+            r2 = pivot
+        
+        while nums[l2] < nums[r2]:
+            mid = l2 + r2 // 2
+            if nums[mid] == target:
                 return mid
-
-            elif target > nums[mid]:
-                low = mid
-
+            if nums[mid] > target:
+                r2 = mid
             else:
-                high = mid
-    """
+                l2 = mid
+        return -1
+
+    
