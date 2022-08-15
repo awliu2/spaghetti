@@ -42,26 +42,12 @@ ___
 |`searchInRotatedSorted`|can find the "pivot" but having difficulty with the second binary search and edge cases|
 |`timeMap`|haven't looked at it in a while|
 |`encodeDecode`| edge case of `[]` doesn't work|
-|`groupAnagrams`|returns 
+|`groupAnagrams`|returns duplicates|
+|`prodArrayExceptSelf`|want to revist it|
+|`minStack`|did it w/ Rohan, should revist|
+|`numIslands`|try using a graph|
+|`coinChange`|literally copied the neetcode soln|
+|`twoSumII`|gonna show up|
+|`threeSum`|gotta figure this one out again|
 
-
-
-- **search in rotated sorted array**
-    - can find the "pivot" but having difficulty with the second binary search and edge cases
-- **timeMap**
-    - haven't looked at this one in a while
-- **encode decode**
-    - edge case of empty string doesn't work
-- **group anagrams**
-    - gave up trying to fix duplicate outputs, current solution is not 100% mine
-- **product of array except self**
-    - haven't looked at this one in a while
-- **min stack**
-    - did this one with Rohan, need to do again
-- **number of islands**
-    - try to figure it out again myself
-- **coin change**
-    - basically just used the neetcode soln here
-- **twoSumII and threesum**
-    - because these algos are def gonna show up in OAs
 
