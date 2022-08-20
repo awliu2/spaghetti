@@ -22,32 +22,24 @@ class WordDictionary:
     def search(self, word: str) -> bool:
         def search_in_node(word, node):
             for i, c in enumerate(word):
-                # print(node.children)
-                if c not in node.children:
-                    if c == '.':
-                        for k in node.children:
-                            # print(node.children[k])
-                            if not node.children[k].end and search_in_node(word[i + 1:], node.children[k]):
-                                return True
-                    return False
-                else:
-                    node = node.children[c]
-            
-            return node.end
-        
+                if c == '.':
+
+            return 
+
+
         node = self.root
         return search_in_node(word, node)
                 
             
 
 obj = WordDictionary()
-obj.addWord("hello")
-
-print(obj.root.children)
-print(obj.search("hello"))
-print(obj.search(".ello."))
-print(obj.search(".ello"))
-print(obj.search(".el.."))
+obj.addWord("a")
+obj.addWord("ab")
+#print(obj.search("hello"))
+#print(obj.search(".ello."))
+#print(obj.search(".ello"))
+# print(obj.search("a"))
+print(obj.search(".b"))
 # Your WordDictionary object will be instantiated and called as such:
 # obj = WordDictionary()
 # obj.addWord(word)
