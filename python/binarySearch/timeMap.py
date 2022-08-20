@@ -1,3 +1,5 @@
+import collections
+
 class TimeMap:
 
     def __init__(self):

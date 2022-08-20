@@ -9,3 +9,4 @@ class Solution:
             if wordSet <= row1 or wordSet <= row2 or wordSet <= row3:
                 rv.append(w)
         return rv
+
