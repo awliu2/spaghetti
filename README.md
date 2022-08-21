@@ -40,7 +40,7 @@ ___
 |question|issue|
 |---|---|
 |`searchInRotatedSorted`|can find the "pivot" but having difficulty with the second binary search and edge cases|
-|`timeMap`|haven't looked at it in a while|
+|`LongestCharReplacement`|need more sliding pivot practice|
 |`encodeDecode`| edge case of `[]` doesn't work|
 |`groupAnagrams`|returns duplicates|
 |`prodArrayExceptSelf`|want to revist it|
@@ -49,5 +49,6 @@ ___
 |`coinChange`|literally copied the neetcode soln|
 |`twoSumII`|gonna show up|
 |`threeSum`|gotta figure this one out again|
+|`trappingRainWater`|not 100% confident on this one|
 
 
