@@ -19,23 +19,43 @@ class WordDictionary:
         node.end = True
         
 
-    def search(self, word: str) -> bool:
-        
-        def search_in_node(word, node):
-            for i, c in enumerate(word):
+    def search(self, word:str) -> bool:
+        def dfs(word: str, node: TrieNode) -> bool:
+            for i,c in enumerate(word):
                 if c == '.':
                     for child in node.children.values():
-                        if search_in_node(word[i + 1:], child):
+                        if dfs(word[i + 1:], child):
                             return True
                     return False
+                if c in node.children:
+                    node = node.children[c]
                 else:
-                    if c not in node.children:
-                        return False
-                node = node.children[c]
-
+                    return False
             return node.end
+
+        return dfs(word, self.root)
+
+
+
+
+
+    # def search(self, word: str) -> bool:
         
-        return search_in_node(word, self.root)
+    #     def search_in_node(word, node):
+    #         for i, c in enumerate(word):
+    #             if c == '.':
+    #                 for child in node.children.values():
+    #                     if search_in_node(word[i + 1:], child):
+    #                         return True
+    #                 return False
+    #             else:
+    #                 if c not in node.children:
+    #                     return False
+    #             node = node.children[c]
+
+    #         return node.end
+        
+    #     return search_in_node(word, self.root)
                 
             
 
