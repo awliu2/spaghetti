@@ -14,14 +14,12 @@ class Solution:
         
         l = 0
         for r in range(len(s2)):
-            print(f"s2Count: {s2Count}")
-            print(f"s1Count: {s1Count}")
+            # print(f"s2Count: {s2Count}")
+            # print(f"s1Count: {s1Count}")
             
             s2Count[s2[r]] = 1 + s2Count.get(s2[r], 0)
             if r >= len(s1):
-                
                 s2Count[s2[l]] -= 1
-                
                 if s2Count[s2[l]] == 0:
                     s2Count.pop(s2[l])
                 l += 1
