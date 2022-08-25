@@ -51,5 +51,6 @@ ___
 |`threeSum`|gotta figure this one out again|
 |`trappingRainWater`|not 100% confident on this one|
 |'maxSlidingWindow`|try it again|
+|'KthLargestinArray'|used neetcode solution|
 
 
