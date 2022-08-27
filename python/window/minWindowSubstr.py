@@ -35,6 +35,7 @@ class Solution:
 
     def Soln2(self, s: str, t: str) -> str:
         if t == "" : return ""
+
         sCounts = {}
         tCounts = dict(collections.Counter(t))
 

@@ -4,6 +4,25 @@ from typing import List
 from collections import deque
 
 class Solution:
+    def Soln2(self, nums: List[int], k: int) -> List[int]:
+        rv = []
+        q = deque()
+        l = 0
+        for r, n in enumerate(nums):
+            while q and n > nums[q[-1]]:
+                q.pop()
+            
+            q.append(r)
+
+            if l >= q[0]:
+                q.popleft()
+            
+            if r >= k:
+                rv.append[nums[q[0]]]
+                l += 1
+        return rv
+
+
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         currMax = max(nums[0:k])
         rv = [currMax]

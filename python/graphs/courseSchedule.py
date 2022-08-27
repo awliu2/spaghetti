@@ -8,11 +8,9 @@ class Solution:
             if course in checked:
                 # we already visited it, so this must be cyclic
                 return False
-
             if course not in classMap:
                 # course has no prerequisites
                 return True
-
             checked.add(course)
             for prereq in classMap[course]:
                 # check all of courses prereqs
@@ -24,13 +22,12 @@ class Solution:
             classMap[course] = []
             return True
         
-        
         checked = set()
         classMap = collections.defaultdict(list)
+
         for course, req in prerequisites:
             classMap[course].append(req) 
             
-
         for course in range(numCourses):
             if not dfs(course): 
                 return False
