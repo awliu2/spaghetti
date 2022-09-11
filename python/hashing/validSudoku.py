@@ -23,9 +23,9 @@ class Solution:
                 if val in squareSet[(r//3) * 3 + (c //3)]:
                     return False
                 squareSet[(r // 3) * 3 + (c // 3)].add(val)
-        print(rowSet)
-        print(colSet)
-        print(squareSet)
+        # print(rowSet)
+        # print(colSet)
+        # print(squareSet)
         
         return True
 

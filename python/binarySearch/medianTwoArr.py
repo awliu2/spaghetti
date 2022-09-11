@@ -3,37 +3,31 @@ from math import inf
 
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-        totalSize = len(nums1) + len(nums2)
-        totalMid= totalSize // 2
+        A, B = nums1, nums2
+        total = len(nums1) + len(nums2)
+        half = total // 2
 
-        if len(nums2) < len(nums1):
-            nums1, nums2 = nums1, nums2
+        if len(B) < len(A):
+            A, B = B, A
 
-        l1 = 0
-        r1 = len(nums1) - 1
+        l, r = 0, len(A) - 1
         while True:
-            mid1 = (l1 + r1) // 2
-            mid2 = totalMid - mid1 - 2
-            
-            maxLeft1 = nums1[mid1] if mid1 >= 0 else float("-infinity")
+            i = (l + r) // 2  # A
+            j = half - i - 2  # B
 
-            minRight1 = nums1[mid1 + 1] if mid1 + 1 < len(nums1) else float("infinity")
+            Aleft = A[i] if i >= 0 else float("-infinity")
+            Aright = A[i + 1] if (i + 1) < len(A) else float("infinity")
+            Bleft = B[j] if j >= 0 else float("-infinity")
+            Bright = B[j + 1] if (j + 1) < len(B) else float("infinity")
 
-            maxLeft2 = nums2[mid2] if mid2 >= 0 else float("-infinity")
-
-            minRight2 = nums2[mid2 + 1] if mid2 + 1 < len(nums2) else float("infinity")
-            
-            if maxLeft1 < minRight2 and maxLeft2 < minRight1:
-                if totalSize % 2 == 0:
-                    return (max(maxLeft1, maxLeft2) + min(minRight1, minRight2)) / 2
-                else:
-                    return min(minRight1, minRight2)
-            
-            elif maxLeft1 > minRight2:
-                r1 = mid1 - 1
-            if maxLeft2 > minRight1:
-                l1 = mid1 + 1
-
-            
-
-            
+            # partition is correct
+            if Aleft <= Bright and Bleft <= Aright:
+                # odd
+                if total % 2:
+                    return min(Aright, Bright)
+                # even
+                return (max(Aleft, Bleft) + min(Aright, Bright)) / 2
+            elif Aleft > Bright:
+                r = i - 1
+            else:
+                l = i + 1            

@@ -17,11 +17,7 @@ class Solution:
             else:
                 heapq.heappush(distances, (dist, x,y))
         
-        print(distances)
+        # print(distances)
         rv = [(x, y) for (dist, x, y) in distances]
         
         return rv
-
-points = [[3,3],[5,-1],[-2,4]]
-
-print(Solution().kClosest(points, 2))
