@@ -4,10 +4,10 @@ class Solution:
     def islandPerimeter(self, grid: List[List[int]]) -> int:
         def search(r, c):
 
-            if (r,c in visited): 
+            if ((r,c) in visited): 
                 return 0
+            
             visited.add((r,c))
-
 
             if (r < 0 or r >= ROW or 
                 c < 0 or c >= COL or 
