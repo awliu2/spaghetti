@@ -9,7 +9,7 @@ def findMistakes(submissions: List[List[str]]) -> List[str]:
         max_heap = []
         for row in range(len(submissions)):
             if submissions[row][col] in max_heap:
-                
+                ...
             
 
             # curr_row = submissions[row]
