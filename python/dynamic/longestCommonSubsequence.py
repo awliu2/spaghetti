@@ -2,7 +2,6 @@ from functools import lru_cache
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         dp = [[0 for _ in range((len(text2) + 1))] for _ in range (len(text1) + 1)]
-        
         for col in reversed(range(len(text2))):
             for row in reversed(range(len(text1))):
                 if text2[col] == text1[row]:
@@ -13,8 +12,30 @@ class Solution:
         return dp[0][0]
 
 
+    def doordash(self, text1, text2):
+        
+        subarray = set()
+        
+        @lru_cache(maxsize=None)
+        def doordash_oa(i, j):
+            if i == len(text1) or j == len(text2):
+                return 0
+            if text1[i] == text2[j]:
+                subarray.add(j)
+                return 1 + doordash_oa(i + 1, j + 1)
+            else:
+                return max(doordash_oa(i + 1, j), doordash_oa(i, j + 1))
+        print(doordash_oa(0,0))
+        
+        removed = list(set(range(len(text2))) - subarray)
+        removed.sort()
+    
+        return removed[-1] - removed[0] + 1
 
-        # @lru_cache(maxsize=None)
+print(Solution().doordash("ACDEF", "ABCDEEEEF"))
+
+
+
         # def memo_LCS(i, j):
         #     if i == len(text1) or j == len(text2):
         #         return 0
