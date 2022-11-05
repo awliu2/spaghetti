@@ -1,4 +1,4 @@
-class Solution {
+class NumIslands {
     int [][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     public int numIslands(char[][] grid) {

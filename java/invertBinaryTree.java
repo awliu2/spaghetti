@@ -12,7 +12,7 @@ class TreeNode {
     }
 }
  
-class Solution {
+class InvertBinaryTree {
     public TreeNode invertTree(TreeNode root) {
         if (root == null) return root;
         

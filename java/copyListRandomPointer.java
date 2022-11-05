@@ -14,7 +14,7 @@ class Node {
 }
 
 
-class Solution {
+class copyListRandomPointer {
     HashMap<Node, Node> visited = new HashMap<>();
 
     public Node copyRandomList(Node head) {

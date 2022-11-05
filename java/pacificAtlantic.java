@@ -1,5 +1,5 @@
 import java.util.*;
-class Solution {
+class pacificAtlantic {
     public List<List<Integer> > pacificAtlantic(int[][] heights) {
         List<List<Integer> > rv = new ArrayList<>();
 

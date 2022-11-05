@@ -18,7 +18,7 @@ class Node {
 }
 
 
-class Solution {
+class copyGraph {
     Map<Integer, Node> oldToNew = new HashMap<>();
 
     public Node dfs(Node node)

@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class containsDupe {
     public boolean containsDuplicate(int[] nums) {
         Map<Integer, Boolean> count = new HashMap<>();
         int n = nums.length;
