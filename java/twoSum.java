@@ -1,7 +1,7 @@
 import java.util.*;
 
-class Solution {
-    public static int[] twoSum(int[] nums, int target) {
+public class twoSum {
+    static int[] soln(int[] nums, int target) {
         int n = nums.length;
         Map<Integer,Integer> map=new HashMap<>();
         int[] rv = new int[2];
@@ -15,10 +15,10 @@ class Solution {
                 map.put(nums[i], i);
             }
         }
-    return rv;
-    }
-    public static void main(String[] args) {
-        int[] nums = {0, 1, 2};
-        System.out.println(Arrays.toString(twoSum(nums, 2)));
+        return rv;
     }
 }
+
+
+
+
